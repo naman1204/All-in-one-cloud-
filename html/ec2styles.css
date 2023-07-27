@@ -1,0 +1,29 @@
+#os-heading{
+    padding-top:25px;
+    padding-bottom: 20px;
+}
+#instance-head{
+  padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.instance-type{
+  padding-top:20px;
+  padding-bottom: 20px;
+}
+
+#key-pair{
+  padding-top: 25px;
+}
+
+#launchButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+#finButton{
+  margin:90px;
+}

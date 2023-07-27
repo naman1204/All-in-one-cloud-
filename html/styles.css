@@ -1,0 +1,39 @@
+#cass{
+	text-align:center;
+	padding:25px;
+}
+#list-button{ display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#hero-section{
+    margin-top:200px;
+
+}
+
+#getStarted{
+    margin-top: 50px;
+    margin-left: 590px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Features{
+    margin-top: 280px;
+}
+
+body {
+
+    background-color: #f0f0f0;
+    color: #333;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+#hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.card {
+    margin-bottom: 20px;
+}

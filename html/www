@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My own cloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+          <script>
+        function lw(){
+                var cmd=document.getElemenyById("in1").value;
+                var xhr= new XMLHttpRequest();
+                xhr.open("GET", "http://13.232.124.244/cgi-bin/com.py?c=" +cmd);
+                xhr.send();
+                xhr.onreadystatechange = function() {
+                if(this.readyState==4){
+                document.getElementById("d1").innerHTML= this.responseText;
+                }
+        }   }                            
+
+        function dockerList(){
+                var xhml=new XMLHttpRequest();
+                xhml.open("GET","http://13.232.124.244/cgi-bin/cas.py");
+                xhml.send();
+                xhml.onreadystatechange=function(){
+                if(this.readyState==4){
+                document.getElementById("d2").innerHTML= this.responseText;
+                }
+        }               
+}
+        function dockerRun(){
+                var xhml2=new XMLHttpRequest();
+                xhml.open("GET","http://13.232.124.244/cgi-bin/cas.py");
+                xhml.send();
+                xhml.onreadystatechange=function(){
+                if(this.readyState==4){
+                document.getElementById("d2").innerHTML= this.responseText;
+                        console.log(this.responseText);
+                     }
+                }
+        }
+
+    </script>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LWcloud</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="docker.html">Docker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="s3.html">Storage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="EC2.html">Virtual machines</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            
+          </span>
+        </div>
+      </nav>
+      <br/>      
+        <h1 style="text-align: center">Welcome to myCloud.</h1>
+          <div id="d1">
+                <p>Enter Linux commands:</p>
+                <br>        
+        </div>
+
+          <form action="http://13.232.124.244/cgi-bin/com.py">
+                  <input id="in1" name="c">
+                  <br>
+
+          </form>
+                
+          <div id="d2">
+                  
+          </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

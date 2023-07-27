@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="ec2styles.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <a class="navbar-brand" href="#"><img src="https://www.jdrf.org/wp-content/uploads/2020/12/AWS-logo-2.jpg" width="80" height="50" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+                  <li class="nav-item active">
+              <a class="nav-link" href="docker.html">Docker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="s3.html">Storage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="EC2.html">Virtual machines</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+
+          </span>
+        </div>
+      </nav>
+
+      <div style="padding:20px;">
+              <h1 style="text-align:center;">Virtual Machines as a service.</h1>
+        <br>
+      </div>
+
+
+        <div class="container">
+        <h2 id="instance-head">1. Give name of instance:</h2>
+
+        <form action="">
+                 <input class="" type="text" placeholder="example123">
+                 <button class="btn btn-outline-secondary" onclick="" type="button">Give name</button>
+                 <br>
+
+                  </form>
+        <h2 id="os-heading">2. Select OS:</h2>
+                <div class="input-group">
+            <select class="custom-select" id="inputGroupSelect04">
+              <option selected>Choose Image</option>
+              <option value="1">Amazon Linux</option>
+              <option value="2">Ubuntu</option>
+              <option value="3">SUSE Linux</option>
+              <option value="4">Redhat</option>
+              <option value="5">Windows</option>
+              <option value="5">Debian</option>
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="launchButton" type="button">Launch</button>
+              <script>
+                document.getElementById('launchButton').addEventListener('click', function() {
+  var selectedOption = document.getElementById('inputGroupSelect04').value;
+
+  switch(selectedOption) {
+    case '1':
+      centosLatest();
+      break;
+    case '2':
+      ubuntuLatest();
+      break;
+    case '3':
+      sinaboxLatest();
+      break;
+    case '4':
+      rhelLatest();
+      break;
+    case '5':
+      fedoraLatest();
+      break;
+    default:
+      console.log('No option is selected.');
+      break;
+  }
+});
+
+              </script>
+
+            </div>
+            </div>
+           <br />
+            <br />
+            <div id="instance-type">
+                <h2>3. Select type of instance:</h2>
+                
+        
+            </div>
+            <br />
+            <br />
+            <div id="secGroup">
+                <h2>4. Select Security Group:</h2>
+
+            </div>
+
+            <div id="key-pair">
+                <h2 style="display: inline;">5. Download Key Pair:</h2>
+                <button id="downButton" style= "margin:30px; "type="button" class="btn btn-primary btn-sm btn-dark"  onclick="">Download</button>
+            </div>
+
+            <div id="launchButton">
+            <button  type="button" id="finButton" class="btn btn-outline-success btn-lg "  onclick="">Launch</button>
+        </div>
+
+        <div id="incoming-data">
+
+
+        </div>
+
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
