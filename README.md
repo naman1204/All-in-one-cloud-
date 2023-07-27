@@ -1,4 +1,4 @@
-# All-in-one-cloud-
+# All-in-one-cloud
 Summer Internship project.
 
 
