@@ -34,13 +34,18 @@ A full-stack cloud management platform designed to enable real-time interaction 
 ## Architecture Overview
 
 Client (Browser)
+
 ↓
 HTML/CSS + JavaScript (AJAX)
+
 ↓
 Python CGI Backend
+
 ↓
 AWS Services (EC2, Auto Scaling)
+
 ↓
+
 Docker Containers + Jenkins CI/CD
 
 
@@ -60,12 +65,17 @@ Docker Containers + Jenkins CI/CD
 ```bash
 git clone https://github.com/your-username/cloud-management-app.git
 cd cloud-management-app
+```
 Configure environment variables (AWS credentials, etc.)
 Run the application
+```bash
 python server.py
+```
 (Optional) Run with Docker
+```bash
 docker build -t cloud-app .
 docker run -p 8080:8080 cloud-app
+```
 Deployment
 Containerized using Docker for portability across environments
 Automated deployments through Jenkins pipelines
@@ -81,6 +91,5 @@ Expand support for additional AWS services
 Upgrade frontend using a modern framework (e.g., React)
 Add monitoring and logging for observability
 Author
-```
 
 Naman Sharma
