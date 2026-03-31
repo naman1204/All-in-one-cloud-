@@ -77,19 +77,25 @@ docker build -t cloud-app .
 docker run -p 8080:8080 cloud-app
 ```
 Deployment
+
 Containerized using Docker for portability across environments
 Automated deployments through Jenkins pipelines
 Hosted on AWS infrastructure with scaling enabled
+
 Key Improvements
+
 Reduced API response time through backend optimizations
 Decreased deployment time using containerization
 Eliminated manual deployment steps with CI/CD automation
 Improved uptime and reliability using AWS auto-scaling
+
 Future Enhancements
+
 Implement authentication and role-based access control
 Expand support for additional AWS services
 Upgrade frontend using a modern framework (e.g., React)
 Add monitoring and logging for observability
+
 Author
 
 Naman Sharma
