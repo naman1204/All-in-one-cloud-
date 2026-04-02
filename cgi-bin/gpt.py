@@ -7,7 +7,7 @@ print()
 form = cgi.FieldStorage()
 prompt = form.getvalue("prompt")
 
-mykey = "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"
+mykey = ""
 openai.api_key = mykey
 # Define the list of prompts you want to use
 prompts = [
